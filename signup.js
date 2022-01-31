@@ -1,5 +1,5 @@
 const signUp = () => {
-    const { email } = newUser;
+  const { email } = newUser;
     for (const user of users) {
       if (user['email'] == email) {
         return 'email already exist. Please log in!';
@@ -12,13 +12,13 @@ const signUp = () => {
   console.log(signUp(newUser));
   console.log(signUp(newUser));
   console.log(users);
-  const currentUser = {
+const currentUser = {
     email: 'xyz@gmail.com',
     password: '12345'
   };
-  const signIn = user => {
-    let found = false;
-    const { email, password } = user;
+ const signIn = user => {
+  let found = false;
+  const { email, password } = user;
     for (let i = 0; i < users.length; i++) {
       if (users[i]['email'] === email && users[i]['password'] === password) {
         users[i].isLoggedIn = true;

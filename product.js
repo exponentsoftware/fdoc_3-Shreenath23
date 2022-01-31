@@ -1,16 +1,16 @@
 const rateProduct = (productId, userId, ratingPoint) => {
     let found = false;
-    for (let i = 0; i < products.length; i++) {
-      if (products[i].id === productId) {
-        for (let j = 0; j < products[i].ratings.length; j++) {
-          if (products[i].ratings[j].userId === userId) {
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].id === productId) {
+      for (let j = 0; j < products[i].ratings.length; j++) {
+        if (products[i].ratings[j].userId === userId) {
             const rate = { userId, rate: ratingPoint };
             products[i].ratings[j].rate = ratingPoint;
             found = true;
             break;
           }
         }
-        if (!found) {
+      if (!found) {
           products[i].ratings.push({ userId, rate: ratingPoint });
         }
       }
@@ -22,10 +22,10 @@ const rateProduct = (productId, userId, ratingPoint) => {
   rateProduct('aegfal', 'fg12cy', 2.0);
   console.log(products);
   //b
-  const averageRating = productId => {
+const averageRating = productId => {
     let sum = 0;
     let len; 
-    for (let i = 0; i < products.length; i++) {
+  for (let i = 0; i < products.length; i++) {
       if (products[i]._id === productId) {
         len = products[i].ratings.length;
         for (let j = 0; j < len; j++) {
@@ -37,7 +37,7 @@ const rateProduct = (productId, userId, ratingPoint) => {
         }
       }
     }
-    console.log(len);
+  console.log(len);
     return sum / len;
   };
   console.log(averageRating('eedfcf'))

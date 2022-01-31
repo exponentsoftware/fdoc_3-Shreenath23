@@ -1,16 +1,16 @@
 const student = {
-    name: 'David',
-    age: 25,
-    skills: {
-        frontEnd: [
-            { skill: 'HTML', level: 10 },
-            { skill: 'CSS', level: 8 },
-            { skill: 'JS', level: 8 },
-            { skill: 'React', level: 9 }
+  name: 'David',
+  age: 25,
+  skills: {
+      frontEnd: [
+          { skill: 'HTML', level: 10 },
+          { skill: 'CSS', level: 8 },
+          { skill: 'JS', level: 8 },
+          { skill: 'React', level: 9 }
         ],
-        backEnd: [
-            { skill: 'Node',level: 7 },
-            { skill: 'GraphQL', level: 8 },
+      backEnd: [
+          { skill: 'Node',level: 7 },
+          { skill: 'GraphQL', level: 8 },
         ],
         dataBase:[
             { skill: 'MongoDB', level: 7.5 },
@@ -20,11 +20,11 @@ const student = {
 }
 
 const newStudent = { ...student ,
-    skills: {
-      ...student.skills,
-      frontEnd: [...student.skills.frontEnd, { skill: 'Bootstrap', level: 8 }],
-      backEnd: [...student.skills.backEnd, { skill: 'Express', level: 8 }],
-      dataBase: [...student.skills.dataBase, { skill: 'SQL', level: 8 }],
+  skills: {
+    ...student.skills,
+    frontEnd: [...student.skills.frontEnd, { skill: 'Bootstrap', level: 8 }],
+    backEnd: [...student.skills.backEnd, { skill: 'Express', level: 8 }],
+    dataBase: [...student.skills.dataBase, { skill: 'SQL', level: 8 }],
      
     }};
 console.log(newStudent);
@@ -52,7 +52,7 @@ console.log(Object.keys(skillkey).length);
 //1(d)
 const checkGraphicDesignProp = (student, checkkey) => {
   check = Object.keys(student).filter((item) => item == checkkey);
-  if (check.length == 0) {
+if (check.length == 0) {
     console.log(false);
   } else console.log(true);
 };
